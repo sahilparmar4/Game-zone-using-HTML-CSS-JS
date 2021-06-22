@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title> WT project 1 </title>
+      <script>
+         function p1()
+         {
+         var a = document.getElementById("t1").value;
+            if(a=="")
+                {
+                    document.getElementById("d2").innerHTML="FIRST NAME MUST NOT BE BLANK";
+                }
+            else
+                {
+                    document.getElementById("d2").innerHTML="";
+                }
+         }
+             
+             function p3()
+         {
+             var c = document.getElementById("t3").value;
+             if(c=="")
+                {
+                    document.getElementById("d4").innerHTML="LAST NAME MUST NOT BE BLANK";
+                }
+             else
+                {
+                    document.getElementById("d4").innerHTML="";
+                }
+         }
+             
+             function p10()
+         {
+         var i = document.getElementById("t11").value;
+            if(i=="")
+                {
+                    document.getElementById("d11").innerHTML="PLZ ENTER YOUR PASSWORD";
+                }
+            else if(i.length<6)
+                {
+                    document.getElementById("d11").innerHTML="PLZ ENTER STRONG PASSWORD CONTAINING MORE THAN 6 ELEMENTS";
+                }
+            else
+                {
+                    document.getElementById("d11").innerHTML="";
+                }
+         }
+             function p11()
+         {
+         var j = document.getElementById("t11").value;
+         var k = document.getElementById("t12").value;
+            if(k=="")
+                {
+                    document.getElementById("d12").innerHTML="PLZ ENTER YOUR CONFIRM PASSWORD";
+                }
+            else if(k.length<6)
+                {
+                    document.getElementById("d12").innerHTML="PLZ ENTER STRONG PASSWORD CONTAINING MORE THAN 6 ELEMENTS";
+                }
+            else if(k==j)
+                {
+                    document.getElementById("d12").innerHTML="";
+                }
+            else{
+                   document.getElementById("d12").innerHTML="CONFIRM PASSWORD  SHOULD BE SAME AS ENTERED ABOVE";
+                }
+         }
+             function p12()
+         {
+         var l = document.getElementById("t10").value;
+            if(l=="")
+                {
+                    document.getElementById("d13").innerHTML="PLZ ENTER YOUR EMAIL-ID";
+                }
+            else
+                {
+                    document.getElementById("d13").innerHTML="";
+                }
+         }
+         
+         
+         
+         
+      </script>
+      <style>
+         #d1
+         {
+         margin-top:80px;
+         border: 4px;
+         width: auto ; 
+         height: auto;
+         border-right-style: dotted;
+         border-bottom-style:double;
+         border-top-style: double;
+         border-left-style: dotted;
+         border-radius: 30px;
+         border-color:yellow;
+         border-width: 20px;
+         background-color:black;
+         font-family: cursive;
+         color:yellow;
+         }
+      </style>
+   </head>
+   <body style="background-image:linear-gradient(black ,yellow)">
+      <center>
+         <img src="pro1.jpg" style="border-radius: 90px; width: 90px; height:90px">
+         <h1 style="font-family: monospace ; font-size: 50px"><u><i style="color:yellow ; background-color: black">WELCOME </i><i style="color:black; background-color: yellow">TO </i> <i style="color:yellow ; background-color: black">SKULL </i> <i style="color:black ; background-color: yellow">GAMING</i></u></h1>
+      </center>
+      <center>
+         <form action="introduction.html" method="post" >
+            <table   id="d1" >
+               <tr>
+                  <td align="center"> FIRST NAME </td>
+                  <td> <input type="text" name="fname" id="t1" placeholder="  Enter Fname"  onblur="p1()"> <span id ="d2" style="color: red"></span></td>
+               </tr>
+               <tr>
+                  <td align="center"> LAST NAME </td>
+                  <td> <input type="text" name="Lname" id="t3" placeholder="  Enter Lname" onblur="p3()"><span id ="d4" style="color: red"></span> </td>
+               </tr>
+               <tr>
+                  <td align="center"> ENTER EMAIL-ID</td>
+                  <td> <input type="text" name="email-id" id="t10" placeholder="  Enter Email eg.xxxxx@gmail.com" onblur="p12()"><span id="d13" style="color: red"> </span> </td>
+               </tr>
+               <tr>
+                  <td align="center"> ENTER PASSWORD</td>
+                  <td> <input type="password" name="pass" id="t11" placeholder="  Enter Password" onblur="p10()"><span id="d11" style="color: red"> </span> </td>
+               </tr>
+               <tr>
+                  <td align="center"> CONFIRM PASSWORD</td>
+                  <td> <input type="cpassword" name="cpass" id="t12" placeholder="  Confirm Password" onblur="p11()"><span id="d12" style="color: red"> </span> </td>
+               </tr>
+               <tr>
+                  <td>
+                     <center> <input type="submit" value="submit" style="margin-left:60px"></center>
+                  </td>
+               </tr>
+            </table>
+         </form>
+      </center>
+   </body>
+</html>
